@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Конструктор резюме</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/resume-preview.css" />
+    <link rel="stylesheet" href="styles/resume-form.css">
+  </head>
+  <body>
+    <h1 class="resume-preview__header" test-id="resume-form-title">
+      Конструктор резюме
+    </h1>
+
+    <section class="resume-preview">
+      <div class="container">
+        <div class="resume-preview__content" test-id="resume-main-content">
+          <a href="" class="resume-preview__back-button" id="preview-back-button" test-id="back-button"></a>
+          
+          <!-- Left Section -->
+          <aside class="left-section resume-preview__left-section" id="resume-main-article">
+            <img alt="photo" class="left-section__img" src="./images/photo.jpg" />
+
+            <!-- Личные данные -->
+            <div class="left-section__info" id="personal-info-section" test-id="resume-main-section" >
+              <h2 class="left-section__header">Личные данные</h2>
+              <ul class="left-section__list">
+                <li class="left-section__item">
+                  <h3 class="left-section__title">ФИО</h3>
+                  <p class="left-section__text" id="full-name"></p>
+                </li>
+                <li class="left-section__item">
+                  <h3 class="left-section__title">Дата рождения</h3>
+                  <p class="left-section__text" id="birth-date"></p>
+                </li>
+                <li class="left-section__item">
+                  <h3 class="left-section__title">Город</h3>
+                  <p class="left-section__text" id="city"></p>
+                </li>
+                <li class="left-section__item">
+                  <h3 class="left-section__title">Номер телефона</h3>
+                  <a href="tel:+7 (234) 228-18-15" class="personal-into__telephone" id="telephone"></a >
+                </li>
+                <li class="left-section__item">
+                  <h3 class="left-section__title">Email</h3>
+                  <a href="mailto:beautifulfly@yandex.ru" class="left-section__email" id="email"></a>
+                </li>
+              </ul>
+            </div>
+
+          </aside>
+
+          <!-- Right Section -->
+          <main class="right-section resume-preview__right-section" id="resume-main-article" >
+            <h1 class="right-section__header">Данилов Дмитрий Евгеньевич</h1>
+            <p class="right-section__description" id="description-section" test-id="resume-main-section">
+            </p>
+
+          </main>
+        </div>
+        <a href="./all.html" class="resume-preview__save-button" type="button" test-id="save-button">Сохранить</a>
+      </div>
+    </section>
+
+    <section class="resume-form">
+      <div class="container">
+
+        <h1 class="resume-form__header">Конструктор Резюме</h1>
+
+        <form action="get" class="resume-form__form" test-id="resume-builder">
+          <label for="input-title" class="resume-form__label"> Название резюме: 
+            <input class="resume-form__input" type="text" id="input-title" test-id="resume-title-field">
+          </label>
+
+          <!-- Личная информация -->
+          <label class="resume-form__label" for="input-full-name">ФИО:
+            <input class="resume-form__input" type="text" id="input-full-name" required placeholder="Введите свое ФИО" test-id="personal-info">
+          </label>
+          <label class="resume-form__label" for="input-birth-date">Дата рождения:
+            <input class="resume-form__input" type="date" id="input-birth-date" test-id="personal-info">
+          </label>
+          <label class="resume-form__label" for="input-city">Город:
+            <input class="resume-form__input" type="text" id="input-city" test-id="personal-info">
+          </label>
+          <label class="resume-form__label" for="input-telephone">Номер телефона:
+            <input class="resume-form__input" type="tel" id="input-telephone" test-id="personal-info">
+          </label>
+          <label class="resume-form__label" for="input-email">Email:
+            <input class="resume-form__input" type="email" id="input-email" test-id="personal-info">
+          </label>
+          
+          <!-- Интересы -->
+          <div class="many-input-section resume-form__many-input-section" id="input-interests">
+            <h2 class="many-input-section__title">Интересы:</h2>
+            <ul class="many-input-section__list">
+            </ul>
+            <label class="resume-form__label" for="input-interest">
+              <input type="text" class="many-input-section__input" placeholder="Введите ваш интерес" required test-id="interest">
+              <button class="many-input-section__delete-button" type="button" test-id="remove-interest">Удалить</button>
+              <button class="many-input-section__add-button" type="button" test-id="add-interest">Добавить</button>
+            </label>
+            
+          </div>
+          
+          <!-- Языки -->
+          <div class="many-input-section resume-form__many-input-section" id="input-languages">
+            <h2 class="many-input-section__title">Языки:</h2>
+            <ul class="many-input-section__list">
+            </ul>
+            <label class="resume-form__label">
+              <input type="text" class="many-input-section__input" placeholder="Введите язык" required test-id="language-name">
+              <input type="text" class="many-input-section__input" placeholder="Уровень" required test-id="language-level">
+              <button class="many-input-section__delete-button" type="button" test-id="remove-language">Удалить</button>
+              <button class="many-input-section__add-button" type="button" test-id="add-language">Добавить</button>
+            </label>
+          </div>
+
+          <!-- Описание -->
+          <div class="textarea-section resume-form__textarea-section" id="input-description">
+            <h2 class="many-input-section__title">Описание:</h2>
+            <textarea id="textarea-description" class="textarea-section__textarea" rows="5" test-id="personal-description"></textarea>
+          </div>
+
+          <!-- Опыт Работы -->
+          <div class="many-input-section resume-form__many-input-section" id="input-jobs">
+            <h2 class="many-input-section__title">Опыт работы:</h2>
+            <ul class="many-input-section__list">
+            </ul>
+            <div class="many-input-section__inputs">
+              <input type="text" class="many-input-section__input" placeholder="Должность" required test-id="job-title">
+              <label for="job-date-start" class="many-input-section__label">Дата начала:
+                <input type="date" class="many-input-section__input" id="job-date-start" test-id="job-date-start">
+              </label>
+              <label for="job-date-end" class="many-input-section__label">Дата конца: 
+                <input type="date" class="many-input-section__input" id="job-date-end" test-id="job-date-end">
+              </label>
+              <input type="text" class="many-input-section__input" placeholder="Место работы" test-id="job-place">
+              <input class="many-input-section__input" placeholder="Детали" test-id="job-description">
+              <button class="many-input-section__delete-button" type="button" test-id="remove-job">Удалить</button>
+              <button class="many-input-section__add-button" type="button" test-id="add-job">Добавить</button>
+            </div>
+            
+          </div>
+
+          <!-- Образование и квалификация -->
+          <div class="many-input-section resume-form__many-input-section" id="input-educations">
+            <h2 class="many-input-section__title">Образование и квалификация:</h2>
+            <ul class="many-input-section__list">
+            </ul>
+            <div class="many-input-section__inputs">
+              <input type="text" class="many-input-section__input" placeholder="Тип образования" required test-id="education-title">
+              <label for="education-date-start" class="many-input-section__label">Дата начала:
+                <input type="date" class="many-input-section__input" id="education-date-start" test-id="education-date-start">
+              </label>
+              <label for="education-date-end" class="many-input-section__label">Дата конца: 
+                <input type="date" class="many-input-section__input" id="education-date-end" test-id="education-date-end">
+              </label>
+              <input type="text" class="many-input-section__input" placeholder="Место обучения" test-id="education-place">
+              <input class="many-input-section__input" placeholder="Доп информация" test-id="education-description">
+              <button class="many-input-section__delete-button" type="button" test-id="remove-education">Удалить</button>
+              <button class="many-input-section__add-button" type="button" test-id="add-education">Добавить</button>
+            </div>
+            
+          </div>
+
+          <!-- Курсы -->
+          <div class="many-input-section resume-form__many-input-section" id="input-courses">
+            <h2 class="many-input-section__title">Курсы:</h2>
+            <ul class="many-input-section__list">
+            </ul>
+            <div class="many-input-section__inputs">
+              <input type="text" class="many-input-section__input" placeholder="Название курса" required test-id="course-title">
+              <label for="course-date-start" class="many-input-section__label">Дата начала:
+                <input type="date" class="many-input-section__input" id="course-date-start" test-id="course-date-start">
+              </label>
+              <label for="course-date-end" class="many-input-section__label">Дата конца: 
+                <input type="date" class="many-input-section__input" id="course-date-end" test-id="course-date-end">
+              </label>
+              <input type="text" class="many-input-section__input" placeholder="Автор курса" test-id="course-place">
+              <button class="many-input-section__delete-button" type="button" test-id="remove-course">Удалить</button>
+              <button class="many-input-section__add-button" type="button" test-id="add-course">Добавить</button>
+            </div>
+          </div>
+
+          <button class="resume-form__generate-button" type="button" id="form-generate-button" disabled test-id="generate-resume">Посмотреть</button>
+        </form>
+      </div>
+    </section>
+
+    <script type="module" src="./js/form-logic.js"></script>
+  </body>
+</html>

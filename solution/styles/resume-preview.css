@@ -1,0 +1,154 @@
+
+/* Resume Left Section */
+.resume-preview {
+  font-family: Arial;
+}
+
+.resume-preview__header {
+  width: 1264px;
+  height: 33px;
+  margin: 0 0 15px;
+}
+
+.resume-preview__content {
+  display: flex;
+  max-height: 854px;
+
+}
+
+.resume-preview__back-button {
+  visibility: hidden;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  transform: rotate(45deg);
+}
+.resume-preview__back-button::after {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  transform: rotate(-90deg);
+}
+
+.resume-preview__back-button:hover,
+.resume-preview__back-button:hover::after {
+  background-color: #6495ED;
+}
+
+.left-section {
+  width: 224px;
+  padding: 16px 16px 21.88px;
+  color: #ffffff;
+  background-color: #6495ed;
+}
+
+.left-section__img {
+  width: 200px;
+  margin: 0 12px 13px;
+  border-radius: 100%;
+}
+
+.left-section__info {
+  max-height: 296px;
+  visibility: visible;
+}
+/* .left-section__info:nth-of-type(1) {
+  min-height: 179px;
+} */
+
+#interests-section > .left-section__header {
+  margin-bottom: 27px;
+}
+#languages-section > .left-section__header {
+  margin-bottom: 30px;
+}
+#job-experience-section > .right-section__header {
+  margin-bottom: 21px;
+}
+#education-section > .right-section__header {
+  margin-bottom: 22px;
+}
+#courses-section > .right-section__header {
+  margin-bottom: 21px;
+}
+
+.left-section__item {
+  width: 100%;
+  margin: 12px 0 12px;
+}
+
+.left-section__title {
+  margin: 0 0 3px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-section__postfix {
+  font-weight: 400;
+}
+
+
+/* Resume Right Section */
+
+.right-section {
+  display: block !important;
+  width: 644px;
+  padding: 27px 16px 0;
+  color: #000000;
+  background-color: #F8F8F8;
+}
+
+.right-section__header {
+  padding-bottom: 27.3px;
+  border-bottom: 1px #D3D3D3 solid;
+}
+
+.right-section__description {
+  margin: 14.2px 0;
+  min-height: 145px;
+}
+
+.info-block__header {
+  border-color: #D3D3D3;
+} 
+
+.info-block__item {
+  display: grid;
+  margin: 12px 0;
+  gap: 0 20px;
+  grid-template-areas:
+  'title date'
+  'company company'
+  'description description';
+}
+
+.info-block__title {
+  grid-area: title;
+}
+
+.info-block__date-section {
+  grid-area: date;
+}
+
+.info-block__company {
+  grid-area: company;
+}
+
+.info-block__description {
+  margin: 12.43px 0 12.61px;
+  grid-area: description;
+}
+
+.date-section {
+  display: flex;
+  justify-content: end;
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 15.84px;
+  letter-spacing: .75px;
+}
